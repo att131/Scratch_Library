@@ -1,4 +1,4 @@
-from Scratch_Library_Main.Scratch_Library_Main._scratch_website_lib import Studio, Scratcher, WEEKLY_SHOUTOUT_STUDIO_ID
+from Scratch_Library_main.Scratch_Library_main._scratch_website_lib import Studio, Scratcher, WEEKLY_SHOUTOUT_STUDIO_ID
 
 from datetime import datetime, timedelta
 import random
