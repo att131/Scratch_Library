@@ -1,4 +1,4 @@
-from Scratch_Library_Main._scratch_website_lib import Studio, MANUAL_PATH
+from Scratch_Library_Main.Scratch_Library_Main._scratch_website_lib import Studio, MANUAL_PATH
 
 # FUNCTIONS
 

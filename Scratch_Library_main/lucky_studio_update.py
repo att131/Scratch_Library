@@ -1,4 +1,4 @@
-from Scratch_Library_Main._scratch_website_lib import copy_luck_studio_update
+from Scratch_Library_Main.Scratch_Library_Main._scratch_website_lib import copy_luck_studio_update
 
 # MAIN
 
