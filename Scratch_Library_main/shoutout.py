@@ -22,7 +22,7 @@ def get_saturday_date():
     # Find the next Saturday's date
     next_saturday = today + timedelta(days=days_until_saturday)
 
-    return next_saturday.strftime("%A, %B %d, %Y")
+    return str(next_saturday.strftime("%A, %B %d, %Y")).strip(", 2025").strip(", 2026").strip(", 2027")
 
 # MAIN
 
