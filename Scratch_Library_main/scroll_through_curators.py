@@ -7,7 +7,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, TimeoutException, NoSuchWindowException
 from selenium.webdriver.common.keys import Keys
 
-from Scratch_Library_Main.Scratch_Library_Main._scratch_website_lib import Studio, scroll_through_curators
+from Scratch_Library_main.Scratch_Library_main._scratch_website_lib import Studio, scroll_through_curators
 
 def start_ui():
     # Ask for the studio ID and validate it
