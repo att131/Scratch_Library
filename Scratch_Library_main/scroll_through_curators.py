@@ -18,6 +18,8 @@ def start_ui():
     
     studio_id = int(studio_id)
 
+    print("Loading...")
+
     # Initialize the Chrome driver
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
@@ -31,6 +33,6 @@ def start_ui():
     # Fullscreen the window
     #driver.fullscreen_window()
 
-    input("Press [ENTER] to close the page... ")
+    time.sleep(9999)
 
     driver.quit()

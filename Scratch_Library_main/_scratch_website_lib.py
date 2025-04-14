@@ -110,14 +110,16 @@ def copy_luck_studio_update():
         
     data = "\n".join(lines).strip().split("\n")
 
-    assert len(data) == 50, "Expected 50 entries!"
+    if len(data) != 50:
+        return "Expected 50 entries!"
 
     # Create the lines
     lines = [Line() for line in range(len(data))]
     for line_idx in range(len(lines)):
         lines[line_idx].text_init(data[line_idx])
 
-    assert len(lines) == len(data)
+    if len(lines) == len(data):
+        return "Internal error"
 
     # Increment the lines
     for line_idx in range(len(lines)):
@@ -127,8 +129,6 @@ def copy_luck_studio_update():
     lines = format_lines(sort_lines(lines))
 
     pyperclip.copy(lines)
-
-    print("Copied!")
 
 # Luck line class
 

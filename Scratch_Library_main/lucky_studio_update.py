@@ -3,5 +3,9 @@ from Scratch_Library_main.Scratch_Library_main._scratch_website_lib import copy_
 # MAIN
 
 def start_ui():
-    # Perform the function, it will ask for input
-    copy_luck_studio_update()
+    error = copy_luck_studio_update()
+
+    if error:
+        print("Error: {}".format(error))
+    else:
+        print("Complete!")
