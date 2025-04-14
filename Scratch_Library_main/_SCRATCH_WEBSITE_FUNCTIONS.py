@@ -1,8 +1,8 @@
-from shoutout import start_ui as shoutout_ui
-from invite_to_studio_manual import start_ui as invite_to_studio_ui
-from download_usernames import start_ui as download_usernames_ui
-from lucky_studio_update import start_ui as lucky_studio_update_ui
-from scroll_through_curators import start_ui as scroll_through_curators_ui
+from Scratch_Library_main.Scratch_Library_main.shoutout import start_ui as shoutout_ui
+from Scratch_Library_main.Scratch_Library_main.invite_to_studio_manual import start_ui as invite_to_studio_ui
+from Scratch_Library_main.Scratch_Library_main.download_usernames import start_ui as download_usernames_ui
+from Scratch_Library_main.Scratch_Library_main.lucky_studio_update import start_ui as lucky_studio_update_ui
+from Scratch_Library_main.Scratch_Library_main.scroll_through_curators import start_ui as scroll_through_curators_ui
 
 import os
 
