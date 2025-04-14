@@ -8,7 +8,7 @@ import pyperclip
 
 USERNAME_TO_FOLLOW = "Crazy-Coderz"
 
-MESSAGE = "Congratulations {}, you have been selected as the shoutout for the 'Weekly Shoutout' studio! If there is any text that you want to add under your username at the top of the studio description then reply to this comment with what you want it to say. It can be anything; a thank you, an advertisement, or simply saying hello to your fellow scratchers! You will remain the shoutout until {} when another user replaces you. I hope you enjoy your time as the shoutout and as always… Scratch On!"
+MESSAGE = "Congratulations {}, you have been selected as the shoutout for the 'Weekly Shoutout' studio! If there is any text that you want to add under your username at the top of the studio description then reply to this comment with what you want it to say. It can be anything; a thank you, an advertisement, or simply saying hello to your fellow scratchers! You will remain the shoutout until {} when another user replaces you. I hope you enjoy your time as the shoutout!"
 
 # FUNCTIONS
 
