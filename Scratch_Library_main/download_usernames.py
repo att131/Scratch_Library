@@ -1,4 +1,4 @@
-from Scratch_Library_Main.Scratch_Library_Main._scratch_website_lib import Scratcher, Studio, FOLLOWERS, NPY_PATH
+from Scratch_Library_main.Scratch_Library_main._scratch_website_lib import Scratcher, Studio, FOLLOWERS, NPY_PATH
 import numpy as np
 
 # MAIN
