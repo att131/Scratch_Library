@@ -1,4 +1,5 @@
 from Scratch_Library_main.Scratch_Library_main._scratch_website_lib import copy_luck_studio_update
+import time
 
 # MAIN
 
@@ -9,3 +10,5 @@ def start_ui():
         print("Error: {}".format(error))
     else:
         print("Complete!")
+
+    time.sleep(5)
