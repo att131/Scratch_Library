@@ -19,7 +19,7 @@ FOLLOWERS = "FOLLOWERS"
 FOLLOWING = "FOLLOWING"
 
 NPY_PATH = "usernames.npy"
-MANUAL_PATH = "_manual_usernames.txt"
+MANUAL_PATH = "names.txt"
 
 LOGIN_URL = 'https://scratch.mit.edu/login'
 
