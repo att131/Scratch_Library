@@ -118,8 +118,8 @@ def copy_luck_studio_update():
     for line_idx in range(len(lines)):
         lines[line_idx].text_init(data[line_idx])
 
-    if len(lines) == len(data):
-        return "Internal error"
+    if len(lines) != len(data):
+        return "Internal error: {}/{}".format(len(lines), len(data))
 
     # Increment the lines
     for line_idx in range(len(lines)):
@@ -135,19 +135,18 @@ def copy_luck_studio_update():
 class Line(object):
     def text_init(self, text):
         # place - @username - points
-        data = text.strip().split()
+        data = text.strip().split(" - ")
         
-        assert len(data) == 5
-        assert data[1] == " - " and data[3]
+        assert len(data) == 3
 
-        self.username = data[2].strip().strip("@")
-        self.points = int(data[4].strip())
+        self.username = data[1].strip()
+        self.points = int(data[2].strip())
 
     def increment_points(self):
         self.points += random.choice(POSSIBLE_POINT_INCREMENTS)
 
     def as_string(self, place):
-        return "{} - @{} - {}\n".format(place, self.username, self.points)
+        return "{} - {} - {}\n".format(place, self.username, self.points)
 
 # Scratcher Class
 
