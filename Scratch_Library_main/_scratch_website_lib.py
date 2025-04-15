@@ -138,7 +138,7 @@ class Line(object):
         data = text.strip().split()
         
         assert len(data) == 5
-        assert data[1] == "-" and data[3]
+        assert data[1] == " - " and data[3]
 
         self.username = data[2].strip().strip("@")
         self.points = int(data[4].strip())
