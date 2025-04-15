@@ -71,8 +71,8 @@ def scroll_through_curators(driver, wait):
         try:
             button = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@class="button"]')))
             button.click()
-        except (NoSuchElementException, StaleElementReferenceException, NoSuchWindowException, TimeoutException):
-            break
+        except: # (NoSuchElementException, StaleElementReferenceException, NoSuchWindowException, TimeoutException):
+            return
 
 # Luck studio functions
 
