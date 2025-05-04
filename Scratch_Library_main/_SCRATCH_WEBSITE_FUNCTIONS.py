@@ -50,9 +50,9 @@ def main():
 Which Scratch tool would you like to use?
 
 A) Update the Luck Leaderboard.
-B) Invite curators from the notepad.
+B) Invite Scratchers to a studio from the notepad.
 C) Update the Weekly Shoutout.
-D) Scroll through curators list.
+D) Scroll through the entire curators list of a studio.
 E) Automatically download usernames.
 
 """)
