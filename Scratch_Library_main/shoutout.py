@@ -40,11 +40,14 @@ def start_ui():
     while True:
         curator = random.choice(curators)
 
-        if Scratcher(curator).is_following(USERNAME_TO_FOLLOW):
-            print("Potential Shoutout: {}... Following Crazy-Coderz!".format(curator))
-            break
-        else:
-            print("Potential Shoutout: {}... Not following Crazy-Coderz".format(curator))
+        try:
+            if Scratcher(curator).is_following(USERNAME_TO_FOLLOW):
+                print("Potential Shoutout: {}... Following Crazy-Coderz!".format(curator))
+                break
+            else:
+                print("Potential Shoutout: {}... Not following Crazy-Coderz".format(curator))
+        except:
+            continue
 
     # Print the curator
     print("\nTotal number of curators: {}".format(len(curators)))
