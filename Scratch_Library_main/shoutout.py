@@ -28,13 +28,15 @@ def get_saturday_date():
 
 def start_ui():
     # Print a message
-    print("Loading...")
+    print("Getting curators...\nThis might take a few minutes...")
 
     # Initalize the studio object
     studio = Studio(WEEKLY_SHOUTOUT_STUDIO_ID)
 
     # Get the curators from the studio
     curators = studio.get_curators()
+
+    print("Curators found!\nSearching for someone following {}...".format(USERNAME_TO_FOLLOW))
 
     # Pick a random curator, check if they are following Crazy-Coderz
     while True:
@@ -47,6 +49,7 @@ def start_ui():
             else:
                 print("Potential Shoutout: {}... Not following Crazy-Coderz".format(curator))
         except:
+            print("Failed to connect to: {}\nRetrying...".format(curator))
             continue
 
     # Print the curator
@@ -61,7 +64,7 @@ def start_ui():
     print(message)
 
     # Ask if the user wants to copy the message
-    copy_message = input("\nDo you want to copy the message? (y/n): ").strip().lower()[0]
+    copy_message = input("\nDo you want to copy the message to clipboard? (y/n): ").strip().lower()[0]
 
     if copy_message == "y":
         # Copy the message to the clipboard

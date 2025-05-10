@@ -30,9 +30,9 @@ def start_ui():
     # Scroll through curators
     wait = WebDriverWait(driver, 5)
     scroll_through_curators(driver, wait)
-    
-    # Fullscreen the window
-    #driver.fullscreen_window()
+
+    # Maximize the window
+    driver.maximize_window()
 
     time.sleep(9999)
 

@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException, TimeoutException, NoSuchWindowException
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
 
 import requests
 import numpy as np
@@ -67,7 +68,7 @@ def get_website(url):
 def scroll_through_curators(driver, wait):
     # Click the "Load more" button until it is no longer clickable
     while True:
-        sleep(0.1)
+        sleep(0.2)
         try:
             button = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@class="button"]')))
             button.click()
@@ -86,17 +87,6 @@ def format_lines(lines):
         result += line.as_string(line_idx + 1)
 
     return result
-
-def get_luck_studio_current_points():
-    raise NotImplementedError("This function is not implemented yet.")
-
-    # Initialize the Chrome driver
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-
-    # Open the website
-    driver.get("https://scratch.mit.edu/studios/36531441/")
-
-    wait = WebDriverWait(driver, 5)
 
 def copy_luck_studio_update():
     print("Enter the data (Press [ENTER] twice to input): ")
@@ -310,13 +300,16 @@ class Studio(object):
     ENDING_TEXT = "studio-member-tile"
 
     def get_curators(self):
-        # Returns a list of the curators AND managers
+        """ Returns a list of the curators AND managers """
+
+        chrome_options = Options()
+        chrome_options.add_argument("--headless=new")
 
         # Get the url of the studio
         url = self.get_curator_url()
         
         # Initialize the Chrome driver
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+        driver = webdriver.Chrome(options=chrome_options)#webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
         # Open the website
         driver.get(url)
@@ -367,9 +360,9 @@ class Studio(object):
         # Close the driver
         driver.quit()
 
-        return curators
+        return [curator.strip("/") for curator in curators]
 
-    def invite_curators(self, curators, func = None):
+    def invite_curators(self, usernames, func = None):
         # Enter the usernames of curators to invite
         usernames = list(np.load(NPY_PATH))
 
