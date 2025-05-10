@@ -1,7 +1,7 @@
 from Scratch_Library_main.Scratch_Library_main.shoutout import start_ui as shoutout_ui
 from Scratch_Library_main.Scratch_Library_main.invite_to_studio_manual import start_ui as invite_to_studio_ui
 from Scratch_Library_main.Scratch_Library_main.download_usernames import start_ui as download_usernames_ui
-from Scratch_Library_main.Scratch_Library_main.lucky_studio_update import start_ui as lucky_studio_update_ui
+#from Scratch_Library_main.Scratch_Library_main.lucky_studio_update import start_ui as lucky_studio_update_ui
 from Scratch_Library_main.Scratch_Library_main.scroll_through_curators import start_ui as scroll_through_curators_ui
 
 import os
@@ -22,14 +22,14 @@ A = "a"
 B = "b"
 C = "c"
 D = "d"
-E = "e"
+#E = "e"
 
 code_to_function = {
-    A: lucky_studio_update_ui,
-    B: invite_to_studio_ui,
-    C: shoutout_ui,
-    D: scroll_through_curators_ui,
-    E: download_usernames_ui,
+    #A: lucky_studio_update_ui,
+    A: invite_to_studio_ui,
+    B: shoutout_ui,
+    C: scroll_through_curators_ui,
+    D: download_usernames_ui,
 }
 
 # FUNCTIONS
@@ -49,11 +49,10 @@ def main():
     print("""
 Which Scratch tool would you like to use?
 
-A) Update the Luck Leaderboard.
-B) Invite Scratchers to a studio from the notepad.
-C) Update the Weekly Shoutout.
-D) Scroll through the entire curators list of a studio.
-E) Automatically download usernames.
+A) Invite Scratchers to a studio from the notepad.
+B) Update the Weekly Shoutout.
+C) Scroll through the entire curators list of a studio.
+D) Automatically download usernames.
 
 """)
 
