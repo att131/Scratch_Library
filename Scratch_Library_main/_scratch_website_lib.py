@@ -425,10 +425,6 @@ class Studio(object):
 
 # TEST
 
-print("NATHANIEL STOP SPAMMING!")
-print("MY ACCOUNT GOT BLOCKED!")
-sleep(99999)
-
 if __name__ == "__main__":
     studio = Studio(36533604)
 
