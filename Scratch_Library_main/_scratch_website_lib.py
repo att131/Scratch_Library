@@ -67,6 +67,7 @@ def get_website(url):
 
 def scroll_through_curators(driver, wait):
     # Click the "Load more" button until it is no longer clickable
+    pages = 0
     while True:
         sleep(0.2)
         try:
@@ -74,6 +75,8 @@ def scroll_through_curators(driver, wait):
             button.click()
         except: # (NoSuchElementException, StaleElementReferenceException, NoSuchWindowException, TimeoutException):
             return
+        print("Pages downloaded: {}".format(pages))
+        pages += 1
 
 # Luck studio functions
 
@@ -331,6 +334,8 @@ class Studio(object):
         # Cut off the html text to the start location
         start_location = html.find(Studio.START_LOCATION_TEXT)
         html = html[start_location:]
+
+        print("Extracting curators...")
 
         curators = []
         while True:
