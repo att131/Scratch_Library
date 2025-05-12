@@ -19,7 +19,7 @@ import pyperclip
 FOLLOWERS = "FOLLOWERS"
 FOLLOWING = "FOLLOWING"
 
-NPY_PATH = "usernames.npy"
+NPY_PATH = "Scratch_Library_main\\Scratch_Library_main\\usernames.npy"
 MANUAL_PATH = "names.txt"
 
 LOGIN_URL = 'https://scratch.mit.edu/login'
