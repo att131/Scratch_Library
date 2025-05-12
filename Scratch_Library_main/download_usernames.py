@@ -1,4 +1,4 @@
-from Scratch_Library_main.Scratch_Library_main._scratch_website_lib import Scratcher, Studio, FOLLOWERS, NPY_PATH
+from Scratch_Library_main.Scratch_Library_main._scratch_website_lib import Scratcher, Studio, FOLLOWERS, NAMES_PATH
 import numpy as np
 
 # MAIN
@@ -41,6 +41,7 @@ def start_ui():
     print("\n{} followers gathered.".format(len(followers)))
 
     # Save the followers in a file
-    np.save(NPY_PATH, followers)
+    with open(NAMES_PATH, "w") as f:
+        f.write("\n\n".join(followers))
 
     input("\nPress [ENTER] to continue... ")

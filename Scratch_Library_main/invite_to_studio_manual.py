@@ -1,11 +1,10 @@
-from Scratch_Library_main.Scratch_Library_main._scratch_website_lib import Studio, MANUAL_PATH
+from Scratch_Library_main.Scratch_Library_main._scratch_website_lib import Studio, NAMES_PATH
 
 # FUNCTIONS
 
 def save_username_file(usernames):
-    with open(MANUAL_PATH, "w") as f:
-        for username in usernames:
-            f.write(username + "\n")
+    with open(NAMES_PATH, "w") as f:
+        f.write("\n\n".join(usernames))
 
 # MAIN
 
@@ -22,7 +21,7 @@ def start_ui():
     studio = Studio(studio_id)
 
     # Get the names from the list
-    with open(MANUAL_PATH, "r") as f:
+    with open(NAMES_PATH, "r") as f:
         usernames = f.read().splitlines()
 
     usernames = [username.strip() for username in usernames if username.strip()]
