@@ -32,6 +32,8 @@ code_to_function = {
     D: download_usernames_ui,
 }
 
+ERROR_PATH = "Error_Log.txt"
+
 # FUNCTIONS
 
 def clear():
@@ -66,7 +68,19 @@ D) Automatically download usernames.
 
     # Call the function associated with the choice
     clear()
-    code_to_function[choice]()
+
+    while True:
+        try:
+            code_to_function[choice]()
+            break
+        except Error as e:
+            print("Error, retrying...")
+
+            # Create the file
+            with file(ERROR_PATH, "w") as f:
+                pass
+            with file(ERROR_PATH, "a") as f:
+                f.write(e)
 
 if __name__ == "__main__":
     while True:
